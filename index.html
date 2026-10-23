@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tevin Mulinge Mutuku | Full Stack Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Tevin Mulinge Mutuku, a Nairobi-based full stack developer and Computer Science student. Church, school and business websites with live demos."
+    />
+    <meta name="theme-color" content="#0f4c81" />
+    <meta name="author" content="Tevin Mulinge Mutuku" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tevin Mulinge Mutuku | Portfolio" />
+    <meta
+      property="og:description"
+      content="Real websites and systems for churches, schools and businesses. Live demos, modern stack, ready for attachment & client work."
+    />
+    <meta property="og:image" content="https://tevintech.netlify.app/og-image.png" />
+    <meta property="og:url" content="https://tevintech.netlify.app" />
+    <meta property="og:site_name" content="TEVINTECH" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tevin Mulinge Mutuku | Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Nairobi-based full stack developer. Church, school and business websites with live demos."
+    />
+    <meta name="twitter:image" content="https://tevintech.netlify.app/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("tevintech-theme");
+          var theme = stored;
+          if (!theme) {
+            theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-theme", theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", theme === "dark" ? "#0b1220" : "#0f4c81");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
