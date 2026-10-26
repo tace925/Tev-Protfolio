@@ -20,6 +20,18 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
+    title: "Backend",
+    blurb: "What powers the systems I build",
+    items: [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "Firebase",
+      "MongoDB",
+      "Authentication",
+    ],
+  },
+  {
     title: "Tools & deployment",
     blurb: "How I ship and keep sites live",
     items: ["Git & GitHub", "Vite", "Netlify", "Vercel", "Chrome DevTools", "Figma basics"],

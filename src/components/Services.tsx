@@ -16,7 +16,7 @@ export function Services() {
           What I can build for you this month.
         </h2>
         <p className="mt-2 max-w-xl text-[15px] text-muted">
-          Clear scope, mobile-first, deployed and handed over with training. Prices in Kenya Shillings.
+          Clear scope, mobile-first, deployed and handed over with training.
         </p>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -40,9 +40,12 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 rounded-full bg-surface2 px-3 py-1.5 text-center text-[12.5px] font-bold text-accent">
-                  {service.priceHint}
-                </p>
+                <a
+                  href="#contact"
+                  className="mt-4 block rounded-full bg-surface2 px-3 py-1.5 text-center text-[12.5px] font-bold text-accent transition hover:bg-accent hover:text-page"
+                >
+                  {service.cta}
+                </a>
               </article>
             );
           })}

@@ -10,7 +10,15 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center sm:flex-row sm:px-6 sm:text-left">
         <div>
           <p className="font-display text-sm font-bold">
-            Crafted &amp; polished by <span className="text-accent">{contact.brand}</span>
+            Crafted &amp; polished by{" "}
+            <a
+              href="https://tevin-tec.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent underline-offset-2 hover:underline"
+            >
+              {contact.brand}
+            </a>
           </p>
           <p className="mt-1 text-[13px] text-muted">
             {contact.name} · {contact.course} · {contact.institution} · © {year}

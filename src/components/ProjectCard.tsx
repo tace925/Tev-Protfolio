@@ -105,22 +105,16 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
             Live site
           </a>
-          {project.repoUrl ? (
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Open GitHub repository for ${project.name} in a new tab`}
-              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border-2 border-line px-4 py-2.5 text-[13px] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-            >
-              <GithubIcon className="h-4 w-4" />
-              GitHub
-            </a>
-          ) : (
-            <span className="inline-flex flex-1 items-center justify-center rounded-full border border-dashed border-line px-4 py-2.5 text-[13px] font-medium text-muted">
-              Private repo
-            </span>
-          )}
+          <a
+            href="https://github.com/tace925"
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open GitHub profile`}
+            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border-2 border-line px-4 py-2.5 text-[13px] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+          >
+            <GithubIcon className="h-4 w-4" />
+            GitHub
+          </a>
         </div>
       </div>
     </article>

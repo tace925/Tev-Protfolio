@@ -1,8 +1,8 @@
-import { Code2, Rocket, Handshake } from "lucide-react";
+import { Code2, Server, Rocket, Handshake } from "lucide-react";
 import { skillGroups } from "../data/skills";
 import { useReveal } from "../hooks/useReveal";
 
-const icons = [Code2, Rocket, Handshake];
+const icons = [Code2, Server, Rocket, Handshake];
 
 export function Skills() {
   const ref = useReveal<HTMLElement>();
@@ -18,7 +18,7 @@ export function Skills() {
           No buzzword soup — the tools I actually ship with, plus how I work.
         </p>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((group, gi) => {
             const Icon = icons[gi % icons.length];
             return (
