@@ -1,8 +1,10 @@
-import { Code2, Server, Rocket, Handshake } from "lucide-react";
+import { Code2, Server, Database, Rocket, Handshake } from "lucide-react";
 import { skillGroups } from "../data/skills";
 import { useReveal } from "../hooks/useReveal";
 
-const icons = [Code2, Server, Rocket, Handshake];
+// One icon per group, in the same order as skillGroups:
+// Front-end, Backend, Databases & BaaS, Tools & deployment, Ways of working
+const icons = [Code2, Server, Database, Rocket, Handshake];
 
 export function Skills() {
   const ref = useReveal<HTMLElement>();
@@ -18,13 +20,15 @@ export function Skills() {
           No buzzword soup — the tools I actually ship with, plus how I work.
         </p>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* 6-column grid on large screens: first 3 cards span 2, last 2 span 3 */}
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {skillGroups.map((group, gi) => {
             const Icon = icons[gi % icons.length];
+            const span = gi < 3 ? "lg:col-span-2" : "lg:col-span-3";
             return (
               <div
                 key={group.title}
-                className="lift rounded-[18px] border border-line bg-surface p-6 shadow-[var(--shadow-card)]"
+                className={`lift rounded-[18px] border border-line bg-surface p-6 shadow-[var(--shadow-card)] ${span}`}
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-ink text-page">
                   <Icon className="h-5 w-5" aria-hidden="true" />
